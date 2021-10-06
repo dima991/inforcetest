@@ -1,0 +1,145 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "imageUrl": "https://productmanagementfestival.com/wp-content/uploads/2017/01/sell-your-product-online.jpg",
+      "name": "Product name 1",
+      "count": 4,
+      "weight": "200g"
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://productmanagementfestival.com/wp-content/uploads/2017/01/sell-your-product-online.jpg",
+      "name": "Product name 2",
+      "count": 5,
+      "weight": "300g"
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://productmanagementfestival.com/wp-content/uploads/2017/01/sell-your-product-online.jpg",
+      "name": "Product name 3",
+      "count": 6,
+      "weight": "400g"
+    },
+    {
+      "id": 4,
+      "imageUrl": "https://productmanagementfestival.com/wp-content/uploads/2017/01/sell-your-product-online.jpg",
+      "name": "Product name 4",
+      "count": 7,
+      "weight": "500g"
+    },
+    {
+      "id": 2573,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819-02.jpg/1200px-The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819-02.jpg",
+      "name": "Product 5",
+      "count": "6",
+      "weight": "500g"
+    },
+    {
+      "id": 359,
+      "imageUrl": "https://cdn.mos.cms.futurecdn.net/truJRnpVqJWCE3EaEjvaTk-1200-80.jpg",
+      "name": "Product 6",
+      "count": "12",
+      "weight": "700g"
+    },
+    {
+      "id": 3193,
+      "imageUrl": "https://cdn.mos.cms.futurecdn.net/truJRnpVqJWCE3EaEjvaTk-1200-80.jpg",
+      "name": "Product 7",
+      "count": "15",
+      "weight": "800g"
+    }
+  ],
+  "comments": [
+    {
+      "description": "dsfsdfsdf",
+      "productId": 1,
+      "date": "15:57 6/10/2021",
+      "id": 3
+    },
+    {
+      "description": "Hello!",
+      "productId": 3,
+      "date": "16:0 6/10/2021",
+      "id": 4
+    },
+    {
+      "description": "Hi!",
+      "productId": 1,
+      "date": "16:2 6/10/2021",
+      "id": 5
+    },
+    {
+      "description": "It's ok!",
+      "productId": 1,
+      "date": "16:2 6/10/2021",
+      "id": 6
+    },
+    {
+      "description": "Ok lets do it!",
+      "productId": 2,
+      "date": "16:3 6/10/2021",
+      "id": 7
+    },
+    {
+      "description": "Have a nice day!",
+      "productId": 2,
+      "date": "16:3 6/10/2021",
+      "id": 8
+    },
+    {
+      "description": "My favoureti product!",
+      "productId": 3,
+      "date": "16:3 6/10/2021",
+      "id": 9
+    },
+    {
+      "description": "You should try this product!",
+      "productId": 3,
+      "date": "16:5 6/10/2021",
+      "id": 10
+    },
+    {
+      "description": "You should try this food!",
+      "productId": 4,
+      "date": "16:5 6/10/2021",
+      "id": 11
+    },
+    {
+      "description": "Ok let's try!",
+      "productId": 4,
+      "date": "16:5 6/10/2021",
+      "id": 12
+    },
+    {
+      "description": "Lorem",
+      "productId": 4,
+      "date": "16:6 6/10/2021",
+      "id": 13
+    },
+    {
+      "description": "Good",
+      "productId": 359,
+      "date": "17:19 6/10/2021",
+      "id": 15
+    },
+    {
+      "description": "Hello",
+      "productId": 3193,
+      "date": "17:34 6/10/2021",
+      "id": 16
+    },
+    {
+      "description": "Some",
+      "productId": 3193,
+      "date": "17:35 6/10/2021",
+      "id": 17
+    },
+    {
+      "description": "Need",
+      "productId": 3193,
+      "date": "17:35 6/10/2021",
+      "id": 18
+    }
+  ]
+}
