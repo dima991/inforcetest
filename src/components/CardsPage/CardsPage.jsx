@@ -4,21 +4,37 @@ import { addCard, fetchCards } from '../../redux/actions/card';
 import CardItem from './CardsItem';
 import { Box } from '@mui/system';
 import { Button, TextField, Typography } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import Modal from '@mui/material/Modal';
+import ModalWindow from '../Modal';
 import { sortItems } from '../../utils/sortItems';
 
-const CardsPage = () => {
-  const style = {
+const useStyles = makeStyles((theme) => ({
+  root: {
     position: 'absolute',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: 400,
+    backgroundColor: '#eaeaea',
     bgcolor: 'purple',
     border: '2px solid #000',
     boxShadow: 24,
-    p: 4,
-  };
+    padding: 4,
+    '& .MuiTypography-root': {
+      color: 'aqua',
+    },
+  },
+  buttonWrapper: {
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+}));
+
+const CardsPage = () => {
+  const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -45,6 +61,7 @@ const CardsPage = () => {
     const { name, value } = e.target;
     setInfo({ [name]: value });
   };
+
   const addProduct = () => {
     dispatch(addCard(info));
     setOpen(false);
@@ -61,7 +78,7 @@ const CardsPage = () => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box className={classes.root}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
             Enter current fields!
           </Typography>
@@ -101,15 +118,15 @@ const CardsPage = () => {
               onChange={handleInfoChange}
             />
           </Box>
-          <Box sx={{ m: 2 }}>
-            <Button variant="contained" onClick={handleClose}>
-              Cancle
-            </Button>
-          </Box>
-          <Box sx={{ m: 2 }}>
-            <Button variant="contained" onClick={addProduct}>
-              Add
-            </Button>
+          <Box>
+            <Box className={classes.buttonWrapper}>
+              <Button variant="contained" onClick={handleClose}>
+                Cancle
+              </Button>
+              <Button variant="contained" onClick={addProduct}>
+                Add
+              </Button>
+            </Box>
           </Box>
         </Box>
       </Modal>
