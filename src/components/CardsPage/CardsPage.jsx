@@ -4,29 +4,9 @@ import { addCard, fetchCards} from '../../redux/actions/card'
 import CardItem from './CardsItem';
 import { Box } from '@mui/system';
 import {Button, TextField, Typography} from '@mui/material'
-import Modal from '@mui/material/Modal';
+import BasicModal from '../Modal/MainModal';
 
 const CardsPage = () => {
-    const style = {
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        width: 400,
-        bgcolor: 'purple',
-        border: '2px solid #000',
-        boxShadow: 24,
-        p: 4,
-      };
-      const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
-
-
-
-
-
     const dispatch = useDispatch();
     const { cards, isLoading } = useSelector(
         (state) => state.cards,
@@ -35,7 +15,6 @@ const CardsPage = () => {
         dispatch(fetchCards())
     }, [dispatch])
     const [info, setInfo] = useReducer((state, newState) => ({ ...state, ...newState }), {
-        id: Math.floor(Math.random() * 10000),
         imageUrl: '',
         name: '',
         count:'',
@@ -49,8 +28,7 @@ const CardsPage = () => {
     };
     const addProduct = () => {
         dispatch(addCard(info))
-        setOpen(false)
-
+        
     }
   
     
@@ -59,14 +37,8 @@ const CardsPage = () => {
 
     return (
         <>
-        <Button variant="contained" onClick={handleOpen}>Add card</Button>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
+      <BasicModal  action={addProduct}>
+        
           <Typography id="modal-modal-title" variant="h6" component="h2">
             Enter current fields!
           </Typography>
@@ -86,18 +58,17 @@ const CardsPage = () => {
                 <Box display="inline">Enter weight of product:</Box>
                 <TextField size="small" type="text" name='weight' onChange={handleInfoChange} />
         </Box>
-        <Box sx={{ m: 2 }}>
+        {/* <Box sx={{ m: 2 }}>
         <Button variant="contained" onClick={handleClose} >Cancle</Button>
-        </Box>
+        </Box> */}
         <Box sx={{ m: 2 }}>
-        <Button variant="contained" onClick={addProduct} >Add</Button>
+        {/* <Button variant="contained" onClick={addProduct} >Add</Button> */}
         </Box>
-        </Box>
-      </Modal>
+        </BasicModal>
 
         <Box>
         {isLoading && <div>Loading...</div>}
-            {cards.map(card => <CardItem key={cards.id} card={card}/>)}
+            {cards.map(card => <CardItem key={card.id} card={card}/>)}
         </Box>
         
             

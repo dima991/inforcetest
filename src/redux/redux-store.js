@@ -10,12 +10,14 @@ import {
 import { cardsReducer } from "./reducers/CardsReducer";
 import { productsReducer } from "./reducers/ProductReducer";
 import { commentsReducer } from "./reducers/CommentsReducer";
+import {modalReducer} from "./reducers/ModalReducer"
 
 
 let reducers = combineReducers({
     cards: cardsReducer,
     products: productsReducer,
-    comments: commentsReducer
+    comments: commentsReducer,
+    modal: modalReducer
 });
 
 

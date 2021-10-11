@@ -24,11 +24,11 @@ export const fetchComments = () => async (dispatch) => {
 // Add Title
 export const addComment = (comment) => async (dispatch) => {
     try {
-         await api.post("/comments", comment);
+         const newComment = await api.post("/comments", comment);
         dispatch({
             type: ADD_COMMENT,
             payload: {
-                comment,
+                comment: newComment.data,
             }
         });
     } catch (err) {

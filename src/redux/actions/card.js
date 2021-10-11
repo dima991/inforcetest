@@ -18,11 +18,12 @@ export const fetchCards = () => async (dispatch) => {
 };
 export const addCard = (card) => async (dispatch) => {
     try {
-         await api.post("/products",card);
+        const newCard = await api.post("/products",card);
+         console.log(newCard)
         dispatch({
             type: ADD_CARD,
             payload: {
-                card,
+                card: newCard.data,
             }
         });
     } catch (err) {

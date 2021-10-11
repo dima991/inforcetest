@@ -50,7 +50,7 @@ let datenow = currentdate.getHours() + ":" + currentdate.getMinutes() + " " +cur
                 <Box>
 
                 </Box>
-                <Box style={{ display: "flex", flexDirection: "column" }}>{currentComments.map(comment => <Comments comment={comment} />)}</Box>
+                <Box style={{ display: "flex", flexDirection: "column" }}>{currentComments.map(comment => <Comments key={comment.id} comment={comment} />)}</Box>
                 <Box>
                     <TextField type="text" placegolder='add comment' value={comment} onChange={(e) => setComment(e.target.value)} />
                     <Button variant="contained" onClick={onAddComment}>Add</Button>
